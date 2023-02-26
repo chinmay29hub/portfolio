@@ -16,7 +16,6 @@ function App() {
   return (
 
     <AnimatePresence initial={ false }>
-    <Model />
 
     <div className="flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
     
@@ -118,7 +117,7 @@ function App() {
       {/* <div className="container w-full mt-7"> */}
           {/* <Spline scene="https://prod.spline.design/HzsgUGRONN0p-MxS/scene.splinecode" /> */}
           <div className="w-full h-full">
-          
+          <Model />
 
           </div>
             

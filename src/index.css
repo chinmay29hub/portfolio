@@ -9,6 +9,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -21,6 +27,7 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 body, html {
   scroll-behavior: smooth
 }
+
 
 @tailwind base;
 @tailwind components;

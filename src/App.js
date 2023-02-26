@@ -6,6 +6,7 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css'
 import { Experience, Projects, SocialLinks } from "./data"
 import { AnimatePresence, motion } from "framer-motion"
+import Model from "./Model";
 
 
 function App() {
@@ -108,13 +109,19 @@ function App() {
 
           
         </nav>
+        
       
       {/* <Spline  scene="https://prod.spline.design/HzsgUGRONN0p-MxS/scene.splinecode" /> */}
       
       {/* <div className="relative w-full h-full" id="home"> */}
-      <div className="container mt-7">
-          <Spline className="" scene="https://prod.spline.design/HzsgUGRONN0p-MxS/scene.splinecode" />
-      </div>
+      {/* <div className="container w-full mt-7"> */}
+          {/* <Spline scene="https://prod.spline.design/HzsgUGRONN0p-MxS/scene.splinecode" /> */}
+          <div className="w-full h-full">
+          <Model />
+
+          </div>
+            
+      {/* </div> */}
           {/* <div className="absolute bottom-10 w-full justify-center items-center flex">
             <div className="shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl">
               <p className="text-textBase">Press and Drag to Orbit</p>

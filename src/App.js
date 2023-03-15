@@ -116,7 +116,7 @@ function App() {
       {/* <div className="relative w-full h-full" id="home"> */}
       {/* <div className="container w-full mt-7"> */}
           {/* <Spline scene="https://prod.spline.design/HzsgUGRONN0p-MxS/scene.splinecode" /> */}
-          <div className="h-full w-full">
+          <div style={{ width : "100%", height:"100vh" }} className="h-full w-full">
           <Model />
 
           </div>

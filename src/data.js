@@ -112,13 +112,13 @@ import Chinmay from "./images/about.png"
       id: 1,
       iconSrc: <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />,
       name: "GitHub",
-      link: "#",
+      link: "https://github.com/chinmay29hub",
     },
     {
       id: 1,
       iconSrc: <IoLogoYoutube className="text-red-500 text-3xl cursor-pointer" />,
       name: "YouTube",
-      link: "#",
+      link: "https://www.youtube.com/channel/UCfc0iDwzZi7CLKIBWBCJNWw",
     },
     {
       id: 1,
@@ -126,7 +126,7 @@ import Chinmay from "./images/about.png"
         <IoLogoTwitter className="text-blue-500 text-3xl cursor-pointer" />
       ),
       name: "Twitter",
-      link: "#",
+      link: "https://twitter.com/chinmay29hub",
     },
     {
       id: 1,
@@ -134,7 +134,7 @@ import Chinmay from "./images/about.png"
         <IoLogoLinkedin className="text-blue-800 text-3xl cursor-pointer" />
       ),
       name: "LinkedIn",
-      link: "#",
+      link: "https://www.linkedin.com/in/chinmay-sonawane-38474019a/",
     },
     {
       id: 1,
@@ -142,6 +142,6 @@ import Chinmay from "./images/about.png"
         <IoLogoWhatsapp className="text-green-500 text-3xl cursor-pointer" />
       ),
       name: "Whatsapp",
-      link: "#",
+      link: "https://wa.me/919561725516?text=Hey%20there%2C%20Chinmay.%20I%20just%20clicked%20something%20on%20your%20Portfolio%20website.%20Let's%20build%20something%20amazing%20together!",
     },
   ];

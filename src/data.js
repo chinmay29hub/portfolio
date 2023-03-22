@@ -17,48 +17,93 @@ import Chinmay from "./images/about.png"
   export const Experience = [
     {
       id: 1,
-      date: "2016 - present",
+      date: "Sep 2022 - Current",
       iconsSrc: <IoCodeWorking />,
-      title: "Creative Director",
-      location: "Doha, Qatar",
+      title: "Freelancer",
+      company : "",
+      location: "Remote",
       description:
-        "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+        "Linux, Technical Content Writing, Development",
     },
     {
       id: 2,
-      date: "2014 - 2016",
+      date: "Jun 2022 - Sep 2022",
       iconsSrc: <IoCodeWorking />,
-      title: "Creative Director",
-      location: "Doha, Qatar",
+      title: "Linux Content Writer",
+      company : "JournalDev",
+      location: "Remote",
       description:
-        "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+        "WordPress, Canva, Article Writing, Technical Writing, Search Engine Optimization (SEO), Creative Content Creation, Linux",
     },
     {
       id: 3,
-      date: "2012 - 2014",
+      date: "Jun 2021 - Aug 2021",
       iconsSrc: <IoCodeWorking />,
-      title: "Creative Director",
-      location: "Doha, Qatar",
+      title: "Digital Marketing Intern",
+      company : "Abner Security",
+      location: "Remote",
       description:
-        "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+        "Instagram, Facebook Marketing, WordPress, Canva, Article Writing, Technical Writing, Search Engine Optimization (SEO)",
     },
     {
       id: 4,
-      date: "2011 - 2012",
+      date: "Jun 2021 - Jul 2021",
       iconsSrc: <IoCodeWorking />,
-      title: "Creative Director",
-      location: "Doha, Qatar",
+      title: "Android Application Development",
+      company : "VCET",
+      location: "Remote",
       description:
-        "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+        "Android Development, Android Studio, Java",
     },
     {
       id: 5,
-      date: "2010 - 2011",
+      date: "April 2021",
       iconsSrc: <IoCodeWorking />,
-      title: "Creative Director",
-      location: "Doha, Qatar",
+      title: "Brand Ambassador",
+      company : "Tutedude",
+      location: "Remote",
       description:
-        "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+        "Digital Marketing, Social Media Marketing, Canva, Creative Content Creation",
+    },
+    {
+      id: 6,
+      date: "Mar 2021",
+      iconsSrc: <IoCodeWorking />,
+      title: "IoT & Computer Vision",
+      company : "The Sparks Foundation",
+      location: "Remote",
+      description:
+        "Raspberry Pi 4, Internet of Things (IoT), OpenCV, TensorFlow, Python, Linux",
+    },
+    {
+      id: 7,
+      date: "Feb 2021",
+      iconsSrc: <IoCodeWorking />,
+      title: "Web Developer",
+      company : "The Sparks Foundation",
+      location: "Remote",
+      description:
+        "Web Development, PHP, MySQL, Web Hosting",
+    },
+    {
+      id: 8,
+      date: "June 2021",
+      iconsSrc: <IoCodeWorking />,
+      title: "Python, Entrepreneurship and Soft Skills",
+      company : "VCET",
+      location: "Remote",
+      description:
+        "Python",
+    },
+    {
+      id: 9,
+      date: "June 2020",
+      iconsSrc: <IoCodeWorking />,
+      title: "Digital Marketing Intern",
+      company : "LaughGuru",
+      location: "Remote",
+      description:
+        " Digital Marketing, Social Media Marketing, Search Engine Optimization (SEO)",
     },
   ];
   

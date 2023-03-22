@@ -13,20 +13,29 @@ import Model from "./Model";
 function App() {
   const [isActive, setIsActive] = useState(false);
 
-  const onButtonClick = () => {
-    // using Java Script method to get PDF file
-    fetch('./Chinmay_Sonawane_Resume.pdf').then(response => {
-        response.blob().then(blob => {
-            // Creating new object of PDF file
-            const fileURL = window.URL.createObjectURL(blob);
-            // Setting various property values
-            let alink = document.createElement('a');
-            alink.href = fileURL;
-            alink.download = './Chinmay_Sonawane_Resume.pdf';
-            alink.click();
-        })
-    })
-}
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleDownload = async () => {
+    try {
+      setIsLoading(true);
+      const response = await fetch("./Chinmay_Sonawane_Resume.pdf", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/pdf",
+        },
+      });
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Chinmay_Sonawane_Resume.pdf";
+      link.click();
+      setIsLoading(false);
+    } catch (error) {
+      console.error(error);
+      setIsLoading(false);
+    }
+  };
 
   return (
     <AnimatePresence initial={false}>
@@ -63,8 +72,9 @@ function App() {
                 Contact
               </a>
               <a
-                href="#download"
+                href="./Chinmay_Sonawane_Resume.pdf"
                 className="ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in"
+                target="_blank"
               >
                 Download
               </a>
@@ -117,9 +127,10 @@ function App() {
                 </a>
                 <motion.a
                   whileTap={{ scale: 0.8 }}
-                  href="#download"
+                  href="./Chinmay_Sonawane_Resume.pdf"
                   className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out"
                   onclick={() => setIsActive(false)}
+                  target="_blank"
                 >
                   Download
                 </motion.a>
@@ -178,10 +189,11 @@ function App() {
               <motion.button
                 whileTap={{ scale: 0.8 }}
                 className="w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80"
-                onClick={onButtonClick}
+                onClick={handleDownload}
+                disabled={isLoading}
               >
                 <span className="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0" >
-                  Download
+                {isLoading ? "Downloading..." : "Download"}
                 </span>
               </motion.button>
             </div>
@@ -209,6 +221,9 @@ function App() {
                     <h3 className="vertical-timeline-element-title">
                       {n.title}
                     </h3>
+                    <h4 className="vertical-timeline-element-subtitle">
+                      {n.company}
+                    </h4>
                     <h4 className="vertical-timeline-element-subtitle">
                       {n.location}
                     </h4>

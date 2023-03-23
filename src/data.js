@@ -160,13 +160,13 @@ import Chinmay from "./images/about.png"
       link: "https://github.com/chinmay29hub",
     },
     {
-      id: 1,
+      id: 2,
       iconSrc: <IoLogoYoutube className="text-red-500 text-3xl cursor-pointer" />,
       name: "YouTube",
       link: "https://www.youtube.com/channel/UCfc0iDwzZi7CLKIBWBCJNWw",
     },
     {
-      id: 1,
+      id: 3,
       iconSrc: (
         <IoLogoTwitter className="text-blue-500 text-3xl cursor-pointer" />
       ),
@@ -174,7 +174,7 @@ import Chinmay from "./images/about.png"
       link: "https://twitter.com/chinmay29hub",
     },
     {
-      id: 1,
+      id: 4,
       iconSrc: (
         <IoLogoLinkedin className="text-blue-800 text-3xl cursor-pointer" />
       ),
@@ -182,7 +182,7 @@ import Chinmay from "./images/about.png"
       link: "https://www.linkedin.com/in/chinmay-sonawane-38474019a/",
     },
     {
-      id: 1,
+      id: 5,
       iconSrc: (
         <IoLogoWhatsapp className="text-green-500 text-3xl cursor-pointer" />
       ),

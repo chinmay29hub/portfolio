@@ -158,12 +158,7 @@ function App() {
             )}
           </div>
         </nav>
-
-        {/* <Spline  scene="https://prod.spline.design/HzsgUGRONN0p-MxS/scene.splinecode" /> */}
-
-        {/* <div className="relative w-full h-full" id="home"> */}
-        {/* <div className="container w-full mt-7"> */}
-        {/* <Spline scene="https://prod.spline.design/HzsgUGRONN0p-MxS/scene.splinecode" /> */}
+        
         <div className="h-full w-full">
           <Model />
         </div>

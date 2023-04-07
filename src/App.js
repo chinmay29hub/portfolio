@@ -158,18 +158,18 @@ function App() {
             )}
           </div>
         </nav>
-        
+
         <div className="h-full w-full">
           <Model />
         </div>
 
         {/* </div> */}
-        {/* <div className="absolute bottom-10 w-full justify-center items-center flex">
-            <div className="shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl">
-              <p className="text-textBase">Press and Drag to Orbit</p>
-            </div>
+        <div className="relative bottom-10 w-full justify-center items-center flex">
+          <div className="shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl">
+            <p className="text-textBase">Press and Drag to Orbit</p>
           </div>
-      </div> */}
+        </div>
+        {/* </div> */}
 
         {/* main section */}
 
@@ -207,8 +207,8 @@ function App() {
                 onClick={handleDownload}
                 disabled={isLoading}
               >
-                <span className="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0" >
-                {isLoading ? "Downloading..." : "Download"}
+                <span className="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                  {isLoading ? "Downloading..." : "Download"}
                 </span>
               </motion.button>
             </div>

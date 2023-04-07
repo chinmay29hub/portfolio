@@ -7,13 +7,13 @@ import {
     IoLogoWhatsapp,
   } from "react-icons/io5";
 import Chinmay from "./images/about.png"
-//   import img1 from "./images/thumb-fooddeliveryapp-reactjs-dec.png";
-//   import img2 from "./images/thumb-fullstack-socialmedia-app-react-sanity.png";
-//   import img3 from "./images/thumb-google-map-clone-nextjs-feb22.png";
-//   import img4 from "./images/thumb-pinterest-clone-reactjs.png";
-//   import img5 from "./images/thumb-videoblog-firebase-reactjs-feb-22.png";
-//   import img6 from "./images/thumb-whatsappui-clone-nextjs.png";
-  
+import ToDo from "./images/todo.png" 
+import Login from "./images/login.png"
+import Nasa from "./images/nasa.png"
+import Crypto from "./images/crypto.png"
+import Url from "./images/url.png"
+
+
   export const Experience = [
     {
       id: 1,
@@ -110,36 +110,36 @@ import Chinmay from "./images/about.png"
   export const Projects = [
     {
       id: 1,
-      name: "Food Delivery UI Mockup",
-      imageSrc: Chinmay,
-      techs: "React Js, Redux, Material UI",
+      name: "To Do App",
+      imageSrc: ToDo,
+      techs: "React, Express, MongoDB, NodeJs ",
       github: "#",
     },
     {
       id: 2,
-      name: "Full Stack Social Media App ",
-      imageSrc: Chinmay,
-      techs: "React Js, Sanity, Tailwind CSS",
+      name: "Login App",
+      imageSrc: Login,
+      techs: "React , Tailwind CSS, JWT, MailGen, Otp, Toast, Express, NodeJs, MongoDB",
       github: "#",
     },
     {
       id: 3,
-      name: "Travel Advisor",
-      imageSrc: Chinmay,
-      techs: "React Js, Chakra UI, Google API",
+      name: "Photos By Mars Rovers",
+      imageSrc: Nasa,
+      techs: "React, Bootstrap, NASAi API",
       github: "#",
     },
     {
       id: 4,
-      name: "Pintrest UI Clone 2.0 ",
-      imageSrc: Chinmay,
+      name: "Crypto Tracker App",
+      imageSrc: Crypto,
       techs: "React Js,  Material UI",
       github: "#",
     },
     {
       id: 5,
-      name: "Own Video Blog",
-      imageSrc: Chinmay,
+      name: "URL Shortener",
+      imageSrc: Url,
       techs: "React Js, Chara UI, Firebase",
       github: "#",
     },

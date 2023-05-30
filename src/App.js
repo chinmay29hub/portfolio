@@ -159,7 +159,7 @@ function App() {
           </div>
         </nav>
 
-        <div className="h-full w-full">
+        <div className="h-full w-full" id="home">
           <Model />
         </div>
 
@@ -255,6 +255,7 @@ function App() {
           >
             {Projects &&
               Projects.map((n, i) => (
+                <a key={n.id} rel="noreferrer" target="_blank" href="https://chinmay29hub-portfolio.netlify.app/">
                 <div
                   key={n.id}
                   className="border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out"
@@ -283,6 +284,7 @@ function App() {
                     </a>
                   </div>
                 </div>
+                </a>
               ))}
           </section>
 

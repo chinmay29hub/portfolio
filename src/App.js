@@ -6,7 +6,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { Experience, Projects, SocialLinks } from "./data";
+import { Articles, Experience, Projects, SocialLinks } from "./data";
 import { AnimatePresence, motion } from "framer-motion";
 import Model from "./Model";
 
@@ -42,20 +42,19 @@ function App() {
     // for the contextmenu event
     const handleContextMenu = (e) => {
       // prevent the right-click menu from appearing
-      e.preventDefault()
-    }
+      e.preventDefault();
+    };
 
-    // attach the event listener to 
+    // attach the event listener to
     // the document object
-    document.addEventListener("contextmenu", handleContextMenu)
+    document.addEventListener("contextmenu", handleContextMenu);
 
-    // clean up the event listener when 
+    // clean up the event listener when
     // the component unmounts
     return () => {
-      document.removeEventListener("contextmenu", handleContextMenu)
-    }
-  }, [])
-
+      document.removeEventListener("contextmenu", handleContextMenu);
+    };
+  }, []);
 
   return (
     <AnimatePresence initial={false}>
@@ -84,6 +83,12 @@ function App() {
                 className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
               >
                 Projects
+              </a>
+              <a
+                href="#articles"
+                className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
+              >
+                Articles
               </a>
               <a
                 href="#contacts"
@@ -139,6 +144,13 @@ function App() {
                   Projects
                 </a>
                 <a
+                  href="#articles"
+                  className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out"
+                  onclick={() => setIsActive(false)}
+                >
+                  Articles
+                </a>
+                <a
                   href="#contacts"
                   className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out"
                   onClick={() => setIsActive(false)}
@@ -190,15 +202,11 @@ function App() {
             </div>
             <div className="w-full h-420 flex flex-col items-center justify-center ">
               <p className="text-lg text-textBase text-center">
-                Hey there! I'm a final year computer science student who loves
-                to explore new technologies and write about them. I've got a
-                good handle on web and Python development, and I'm currently
-                working on some exciting projects with the MERN stack. When I'm
-                not tinkering with code, I'm busy writing technical articles
-                that are organized, innovative, and easy to understand. I also
-                freelance on the side. I'm excited to continue developing my
-                skills and abilities in the field, and I'm always on the lookout
-                for new challenges to tackle.
+                Skilled Software Developer with experience in creating and
+                improving software solutions. Known for solving problems
+                effectively and contributing to successful projects.
+                Enthusiastic about using technology to drive improvements and
+                always eager to learn and grow.
               </p>
 
               <motion.button
@@ -249,43 +257,99 @@ function App() {
           </section>
 
           {/* Projects section */}
-          <section
-            className="flex flex-wrap items-center justify-evenly my-24 gap-4"
-            id="projects"
-          >
-            {Projects &&
-              Projects.map((n, i) => (
-                <a key={n.id} rel="noreferrer" target="_blank" href="https://chinmay29hub-portfolio.netlify.app/">
-                <div
-                  key={n.id}
-                  className="border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out"
-                >
-                  <p className="text-md text-textBase font-medium uppercase">
-                    {n.name.length > 25 ? `${n.name.slice(0, 25)}...` : n.name}
-                  </p>
+          <section className="my-24" id="projects">
+            {/* Title */}
+            <p className="text-2xl text-gray-400 capitalize text-center mb-8">
+              Projects
+            </p>
 
-                  <img
-                    src={n.imageSrc}
-                    className="w-full h-full object-cover rounded-md my-4"
-                    alt=""
-                  />
+            {/* Project Cards */}
+            <div className="flex flex-wrap items-center justify-evenly gap-4">
+              {Projects &&
+                Projects.map((n, i) => (
+                  <div
+                    key={n.id}
+                    className="cursor-pointer"
+                    onClick={() => window.open(n.host, "_blank")}
+                  >
+                    <div className="border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out">
+                      <p className="text-md text-textBase font-medium uppercase hover:text-white transition duration-200">
+                        {n.name.length > 25
+                          ? `${n.name.slice(0, 25)}...`
+                          : n.name}
+                      </p>
 
-                  <div className="flex flex-1 items-center justify-between">
-                    <p className="text-lg text-gray-300">
-                      Technologies
-                      <span className="block text-sm text-gray-500">
-                        {n.techs}
-                      </span>
-                    </p>
-                    <a href={n.github}>
-                      <motion.div whileTap={{ scale: 0.5 }}>
-                        <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />
-                      </motion.div>
-                    </a>
+                      <img
+                        src={n.imageSrc}
+                        className="w-full h-full object-cover rounded-md my-4"
+                        alt=""
+                      />
+
+                      <div className="flex flex-1 items-center justify-between">
+                        <p className="text-lg text-gray-300">
+                          Technologies
+                          <span className="block text-sm text-gray-500 hover:text-white transition duration-200">
+                            {n.techs}
+                          </span>
+                        </p>
+                        <a
+                          href={n.github}
+                          onClick={(e) => e.stopPropagation()}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <motion.div whileTap={{ scale: 0.5 }}>
+                            <IoLogoGithub className="text-textBase text-3xl cursor-pointer hover:text-white transition duration-200" />
+                          </motion.div>
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                </a>
-              ))}
+                ))}
+            </div>
+          </section>
+
+          {/* Articles section */}
+          <section className="my-24" id="articles">
+            {/* Title */}
+            <p className="text-2xl text-gray-400 capitalize text-center mb-8">
+              Articles
+            </p>
+
+            {/* Article Cards */}
+            <div className="flex flex-wrap items-center justify-evenly gap-4">
+              {Articles &&
+                Articles.map((n, i) => (
+                  <div
+                    key={n.id}
+                    className="cursor-pointer"
+                    onClick={() => window.open(n.host, "_blank")}
+                  >
+                    <div className="border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out">
+                      <p className="text-md text-textBase font-medium uppercase hover:text-white transition duration-200">
+                        {n.title.length > 25
+                          ? `${n.title.slice(0, 25)}...`
+                          : n.title}
+                      </p>
+
+                      <img
+                        src={n.imageSrc}
+                        className="w-full h-full object-cover rounded-md my-4"
+                        alt=""
+                      />
+
+                      <div className="flex flex-1 items-center justify-between">
+                        <p className="text-lg text-gray-300">
+                          Topics
+                          <span className="block text-sm text-gray-500 hover:text-white transition duration-200">
+                            {n.topics}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+            </div>
           </section>
 
           {/* My contact section */}

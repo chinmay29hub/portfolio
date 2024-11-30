@@ -6,7 +6,6 @@ import {
   IoLogoLinkedin,
   IoLogoWhatsapp,
 } from "react-icons/io5";
-import Chinmay from "./images/about.png";
 import ToDo from "./images/todo.png";
 import Login from "./images/login.png";
 import Nasa from "./images/nasa.png";
@@ -81,7 +80,7 @@ export const Projects = [
     id: 5,
     name: "URL Shortener",
     imageSrc: Url,
-    techs: "React Js, Chara UI, Firebase",
+    techs: "MongoDb, Express, React, NodeJs",
     github: "https://github.com/chinmay29hub/this-fucking-node.js",
     host: "https://chinmay29hub-url-shortener.onrender.com",
   },

@@ -79,6 +79,12 @@ function App() {
                 About
               </a>
               <a
+                href="#journey"
+                className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
+              >
+                Journey
+              </a>
+              <a
                 href="#projects"
                 className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
               >
@@ -125,28 +131,35 @@ function App() {
                 <a
                   href="#home"
                   className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out"
-                  onclick={() => setIsActive(false)}
+                  onClick={() => setIsActive(false)}
                 >
                   Home
                 </a>
                 <a
                   href="#about"
                   className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out"
-                  onclick={() => setIsActive(false)}
+                  onClick={() => setIsActive(false)}
                 >
                   About
                 </a>
                 <a
+                  href="#journey"
+                  className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out"
+                  onClick={() => setIsActive(false)}
+                >
+                  Journey
+                </a>
+                <a
                   href="#projects"
                   className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out"
-                  onclick={() => setIsActive(false)}
+                  onClick={() => setIsActive(false)}
                 >
                   Projects
                 </a>
                 <a
                   href="#articles"
                   className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out"
-                  onclick={() => setIsActive(false)}
+                  onClick={() => setIsActive(false)}
                 >
                   Articles
                 </a>
@@ -161,7 +174,7 @@ function App() {
                   whileTap={{ scale: 0.8 }}
                   href="./Chinmay_Sonawane_Resume.pdf"
                   className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out"
-                  onclick={() => setIsActive(false)}
+                  onClick={() => setIsActive(false)}
                   target="_blank"
                 >
                   Download
@@ -223,7 +236,7 @@ function App() {
           </section>
 
           {/* Timeline Section */}
-          <section className="w-full flex items-center justify-center">
+          <section className="w-full flex items-center justify-center" id="journey">
             <VerticalTimeline>
               {Experience &&
                 Experience.map((n) => (

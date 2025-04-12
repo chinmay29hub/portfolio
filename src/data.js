@@ -22,7 +22,7 @@ import Ubuntu from "./images/ubuntu.png";
 export const Experience = [
   {
     id: 1,
-    date: "Aug 2023 - Current",
+    date: "Aug 2023 - Dec 2024",
     iconsSrc: <IoCodeWorking />,
     title: "Software Developer",
     company: "BDO",
